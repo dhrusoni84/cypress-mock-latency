@@ -20,17 +20,17 @@
     "mock",
     "testing"
   ],
-  "author": "Your Name",
+  "author": "Dhru Soni",
   "license": "MIT",
   "peerDependencies": {
     "cypress": ">=10.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/cypress-mock-latency.git"
+    "url": "https://github.com/dhrusoni84/cypress-mock-latency.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/cypress-mock-latency/issues"
+    "url": "https://github.com/dhrusoni84/cypress-mock-latency/issues"
   },
-  "homepage": "https://github.com/your-username/cypress-mock-latency#readme"
+  "homepage": "https://github.com/dhrusoni84/cypress-mock-latency#readme"
 }
