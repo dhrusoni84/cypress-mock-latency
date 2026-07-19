@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>cypress-mock-latency demo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+    .spinner {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    .spinner[hidden] {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Checkout demo</h1>
+  <button id="pay-button">Pay now</button>
+
+  <div id="spinner" class="spinner" hidden>Processing payment…</div>
+  <div id="result"></div>
+
+  <script>
+    var payButton = document.getElementById('pay-button');
+    var spinner = document.getElementById('spinner');
+    var result = document.getElementById('result');
+
+    payButton.addEventListener('click', function () {
+      result.textContent = '';
+      spinner.hidden = false;
+
+      fetch('/api/checkout')
+        .then(function (res) {
+          return res.json();
+        })
+        .then(function (data) {
+          result.textContent = data.status || 'done';
+        })
+        .catch(function () {
+          result.textContent = 'error';
+        })
+        .finally(function () {
+          spinner.hidden = true;
+        });
+    });
+  </script>
+</body>
+</html>

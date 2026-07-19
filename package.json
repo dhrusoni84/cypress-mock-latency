@@ -8,7 +8,10 @@
     "src"
   ],
   "scripts": {
-    "test": "echo \"No tests specified yet\" && exit 0"
+    "start": "http-server demo -p 8080 -s",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "start-server-and-test start http://localhost:8080 cy:run"
   },
   "keywords": [
     "cypress",
@@ -20,10 +23,15 @@
     "mock",
     "testing"
   ],
-  "author": "Dhru Soni",
+  "author": "dhrusoni84",
   "license": "MIT",
   "peerDependencies": {
     "cypress": ">=10.0.0"
+  },
+  "devDependencies": {
+    "cypress": "^13.6.0",
+    "http-server": "^14.1.1",
+    "start-server-and-test": "^2.0.3"
   },
   "repository": {
     "type": "git",
