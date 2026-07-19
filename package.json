@@ -1,0 +1,36 @@
+{
+  "name": "cypress-mock-latency",
+  "version": "1.0.0",
+  "description": "Easily mock real-world flaky network latency and jitter in Cypress tests",
+  "main": "src/commands.js",
+  "types": "src/index.d.ts",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "echo \"No tests specified yet\" && exit 0"
+  },
+  "keywords": [
+    "cypress",
+    "cypress-plugin",
+    "network",
+    "latency",
+    "jitter",
+    "throttle",
+    "mock",
+    "testing"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "peerDependencies": {
+    "cypress": ">=10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/cypress-mock-latency.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/cypress-mock-latency/issues"
+  },
+  "homepage": "https://github.com/your-username/cypress-mock-latency#readme"
+}
